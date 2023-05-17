@@ -51,3 +51,24 @@ body {
  margin-top: 0.4rem;
  letter-spacing: 2px;
 }
+.btn{
+  color: white;
+  background-color: rgb(2, 51, 245);
+  border-radius: 20px;
+  padding: 9px;
+ width: 93px;
+ font-weight: bold;
+ border-width: 0px;
+}
+.btn:hover{
+  background-color: black;
+}
+.input{
+  box-shadow: 2px 3px 3px 2px;
+  border-radius: 13px;
+  width: 190px;
+}
+form{
+  align-items: center;
+  text-align: center;
+}
