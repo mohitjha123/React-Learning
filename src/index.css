@@ -61,7 +61,10 @@ body {
  border-width: 0px;
 }
 .btn:hover{
-  background-color: black;
+  background:linear-gradient(to right, rgb(155, 0, 226) 30%, rgb(0, 110, 255) 70%);
+}
+.bt{
+  width: 200px;
 }
 .input{
   box-shadow: 2px 3px 3px 2px;
