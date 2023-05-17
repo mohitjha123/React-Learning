@@ -20,6 +20,18 @@ const books = [
     img: 'https://m.media-amazon.com/images/I/61BM-uMRxfL._AC_UF350,350_QL80_.jpg',
     id: 3,
   },
+  {
+    author: "Akshat Gupta",
+    title: "The Power of Your Subconscious Mind ",
+    img: 'https://m.media-amazon.com/images/I/71UwSHSZRnS.jpg',
+    id: 4,
+  },
+  {
+    author: "Napoleon Hill",
+    title: "Think and Grow Rich",
+    img: 'https://m.media-amazon.com/images/I/81L06A1SNJL.jpg',
+    id: 5,
+  }
 
 ];
 
@@ -57,16 +69,19 @@ const EventExample = () => {
   const handleButtonClick = () => {
     alert("handle Button Click");
   }
-  const handleOnSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form Submitted");
+  const handleOnSubmit = () => {
+    alert("Form Submitted");
   }
   return <section>
     <form onSubmit={handleOnSubmit}>
       <h2>Typical Form</h2>
-      <input type="text" name='example' onChange={handleFormInput} style={{ margin: '1rem 0' }}  />
+      <input className='input' type="text" name='example' onChange={handleFormInput} style={{ margin: '1rem 0' }}  />
+   <div>
+   <button className='btn' onClick={handleButtonClick} type='button' style={{margin:'5px'}}>click me</button>
+    <button  className='btn' type='submit' style={{margin:'5px'}}>Submit</button>
+   </div>
+   <button type='button' className="btn bt" onClick={() => alert("Anonymous Function")}>Anonymous Function</button>
     </form>
-    <button onClick={handleButtonClick}>click me</button>
   </section>
 }
 
