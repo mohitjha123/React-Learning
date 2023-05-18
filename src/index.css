@@ -67,6 +67,9 @@ body {
 .bt{
   width: 200px;
 }
+.bttn{
+  width: 120px;
+}
 .input{
   box-shadow: 2px 3px 3px 2px;
   border-radius: 13px;
