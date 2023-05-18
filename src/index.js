@@ -51,10 +51,13 @@ const thirdBook = {
   img: './img/hindu-newproject2.jpg',
 };*/
 const BookList = () => {
+  const addToCard = () =>{
+    alert("Added To Your Card")
+  }
   return <section className='booklist'>
     <EventExample />
     {books.map((book) => {
-      return <Book {...book} key={book.id} />;
+      return <Book {...book} key={book.id} addToCard={addToCard} />;
     })}
   </section>
 }
@@ -86,7 +89,7 @@ const EventExample = () => {
 }
 
 const Book = (props) => {
-  const { img, title, author } = props;
+  const { img, title, author, addToCard } = props;
   console.log(props)
   const displayTitle = () =>{
     alert(title)
@@ -96,6 +99,7 @@ const Book = (props) => {
     <h2>{title}</h2>
     <h3>{author}</h3>
     <button className="btn" onClick={displayTitle}>View Title</button>
+    <button className="btn bttn" onClick={addToCard}>Add To Card</button>
   </article>
 }
 const root = ReactDOM.createRoot(document.getElementById('root'));
