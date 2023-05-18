@@ -54,10 +54,13 @@ const BookList = () => {
   const addToCard = () =>{
     alert("Added To Your Card")
   }
+  const buyNow = () =>{
+    alert("Thanks For Buying")
+  }
   return <section className='booklist'>
     <EventExample />
     {books.map((book) => {
-      return <Book {...book} key={book.id} addToCard={addToCard} />;
+      return <Book {...book} key={book.id} addToCard={addToCard} buyNow={buyNow} />;
     })}
   </section>
 }
@@ -89,16 +92,13 @@ const EventExample = () => {
 }
 
 const Book = (props) => {
-  const { img, title, author, addToCard } = props;
+  const { img, title, author, addToCard, buyNow } = props;
   console.log(props)
-  const displayTitle = () =>{
-    alert(title)
-  }
   return <article className='book'>
     <img src={img} alt={title} />
     <h2>{title}</h2>
     <h3>{author}</h3>
-    <button className="btn" onClick={displayTitle}>View Title</button>
+    <button className="btn" onClick={buyNow}>Buy Now</button>
     <button className="btn bttn" onClick={addToCard}>Add To Card</button>
   </article>
 }
