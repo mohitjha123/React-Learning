@@ -59,6 +59,7 @@ body {
  width: 93px;
  font-weight: bold;
  border-width: 0px;
+ margin: 6px;
 }
 .btn:hover{
   background:linear-gradient(to right, rgb(155, 0, 226) 30%, rgb(0, 110, 255) 70%);
