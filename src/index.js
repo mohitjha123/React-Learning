@@ -75,12 +75,12 @@ const EventExample = () => {
   return <section>
     <form onSubmit={handleOnSubmit}>
       <h2>Typical Form</h2>
-      <input className='input' type="text" name='example' onChange={handleFormInput} style={{ margin: '1rem 0' }}  />
-   <div>
-   <button className='btn' onClick={handleButtonClick} type='button' style={{margin:'5px'}}>click me</button>
-    <button  className='btn' type='submit' style={{margin:'5px'}}>Submit</button>
-   </div>
-   <button type='button' className="btn bt" onClick={() => alert("Anonymous Function")}>Anonymous Function</button>
+      <input className='input' type="text" name='example' onChange={handleFormInput} style={{ margin: '1rem 0' }} />
+      <div>
+        <button className='btn' onClick={handleButtonClick} type='button' style={{ margin: '5px' }}>click me</button>
+        <button className='btn' type='submit' style={{ margin: '5px' }}>Submit</button>
+      </div>
+      <button type='button' className="btn bt" onClick={() => alert("Anonymous Function")}>Anonymous Function</button>
     </form>
   </section>
 }
@@ -88,10 +88,14 @@ const EventExample = () => {
 const Book = (props) => {
   const { img, title, author } = props;
   console.log(props)
+  const displayTitle = () =>{
+    alert(title)
+  }
   return <article className='book'>
     <img src={img} alt={title} />
     <h2>{title}</h2>
     <h3>{author}</h3>
+    <button className="btn" onClick={displayTitle}>View Title</button>
   </article>
 }
 const root = ReactDOM.createRoot(document.getElementById('root'));
