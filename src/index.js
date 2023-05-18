@@ -50,7 +50,12 @@ const thirdBook = {
   title: "The Hidden Hindu",
   img: './img/hindu-newproject2.jpg',
 };*/
+// parents
 const BookList = () => {
+  const getBook = (id) =>{
+    const book = books.find((book) => book.id === id);
+    console.log(book);
+  }
   const addToCard = () =>{
     alert("Added To Your Card")
   }
@@ -60,7 +65,7 @@ const BookList = () => {
   return <section className='booklist'>
     <EventExample />
     {books.map((book) => {
-      return <Book {...book} key={book.id} addToCard={addToCard} buyNow={buyNow} />;
+      return <Book {...book} key={book.id} addToCard={addToCard} buyNow={buyNow} getBook={getBook} />;
     })}
   </section>
 }
@@ -91,15 +96,20 @@ const EventExample = () => {
   </section>
 }
 
+// Child
 const Book = (props) => {
-  const { img, title, author, addToCard, buyNow } = props;
-  console.log(props)
+  const { img, title, author, addToCard, buyNow, getBook, id } = props;
+  const getSingleBook = () =>{
+    getBook(id);
+  }
+  //console.log(props)
   return <article className='book'>
     <img src={img} alt={title} />
     <h2>{title}</h2>
     <h3>{author}</h3>
     <button className="btn" onClick={buyNow}>Buy Now</button>
     <button className="btn bttn" onClick={addToCard}>Add To Card</button>
+    <button className="btn bttn" onClick={getSingleBook}>Get Book</button>
   </article>
 }
 const root = ReactDOM.createRoot(document.getElementById('root'));
