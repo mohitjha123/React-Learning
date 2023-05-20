@@ -11,7 +11,7 @@ import Book from "./book";
 };
 const secBook = {
   author: "Anthony Doerr ",
-  title: "All The Light We Cannot see",
+  title: "All The Lght We Cannot see",
   img: 'https://images.squarespace-cdn.com/content/v1/605b7322b806fb292a9defce/1617816625655-PUCD8T87L4YO2KZGMQPU/all-the-light-we-cannot-see_Anthony_Doerr.jpg',
 };
 const thirdBook = {
