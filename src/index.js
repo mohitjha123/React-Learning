@@ -5,7 +5,7 @@ import books from "./books";
 import Book from "./book";
 
 /*const firstBook = {
-  author: "James Clear",
+  autho: "James Clear",
   title: "Atomic Habits: the life-changing million-copy #1 bestseller",
   img: './img/1632735326.jpg',
 };
